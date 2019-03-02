@@ -1,0 +1,115 @@
+//drop index
+
+
+//relation
+
+ DROP INDEX orders_id_index; 
+
+ DROP INDEX lineitem_id_index; 
+
+
+ 
+
+ DROP INDEX customer_cksegement_index; 
+
+ DROP INDEX customer_cacctbals_index; 
+
+ DROP INDEX customer_cname_index; 
+
+
+
+ DROP INDEX orders_clerk_index; 
+
+ DROP INDEX orders_totalprice_index; 
+
+ DROP INDEX orders_orderpriority_index; 
+
+ DROP INDEX customer_cnationkey_index;
+
+
+
+
+
+DROP INDEX orders_orderdate_index; 
+
+DROP INDEX lineitem_commitdate_index; 
+
+
+DROP INDEX lineitem_receiptdate_index; 
+
+DROP INDEX lineitem_returnflag_index; 
+
+DROP INDEX lineitem_linestatus_index; 
+DROP INDEX lineitem_shipdate_index;
+
+DROP INDEX lineitem_tax_index; 
+
+DROP INDEX lineitem_discount_index; 
+
+DROP INDEX lineitem_shipmode_index; 
+
+
+//json
+ DROP INDEX index_cktsegment; 
+
+ DROP INDEX index_cacctbals;
+
+ DROP INDEX index_cname;
+
+ DROP INDEX index_oclerk;
+
+ DROP INDEX index_ototalprice;
+
+
+ DROP INDEX index_oorderpriority;
+
+ DROP INDEX index_cnationkey;
+
+DROP INDEX index_oorderdate;
+
+DROP INDEX index_lcommitdate;
+
+DROP INDEX index_lreceiptdate;
+
+
+DROP INDEX index_lreturnflag; 
+
+DROP INDEX index_llinestatus;
+
+DROP INDEX index_lshipdate ;
+
+DROP INDEX index_ltax ;
+
+DROP INDEX index_ldiscount; 
+
+DROP INDEX index_lshipmode ;
+
+//mongodb
+db.project1.getIndexes();//show index
+
+db.project1.dropIndex("c_mktsegment_1");
+
+db.project1.dropIndex("c_acctbal_1");
+
+db.project1.dropIndex("c_name_1");
+//watch out the index name is  adding _1
+
+db.project1.dropIndex("orders.data.o_clerk");
+
+db.project1.dropIndex("c_nationkey");
+
+db.project1.dropIndex("orders.data.o_totalprice");
+db.project1.dropIndex("orders.data.o_orderpriority");
+db.project1.dropIndex("orders.data.o_orderdate");
+
+
+db.project1.dropIndex("orders.data.lineitem.l_commitdate");
+
+db.project1.dropIndex("orders.data.lineitem.l_receiptdate");
+db.project1.dropIndex("orders.data.lineitem.l_returnflag");
+db.project1.dropIndex("orders.data.lineitem.l_linestatus");
+db.project1.dropIndex("orders.data.lineitem.l_shipdate");
+db.project1.dropIndex("orders.data.lineitem.l_tax");
+db.project1.dropIndex("orders.data.lineitem.l_discount");
+db.project1.dropIndex("orders.data.lineitem.l_shipmode");
+
